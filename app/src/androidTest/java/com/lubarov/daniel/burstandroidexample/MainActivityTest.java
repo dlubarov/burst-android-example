@@ -1,5 +1,6 @@
 package com.lubarov.daniel.burstandroidexample;
 
+import android.support.test.rule.ActivityTestRule;
 import com.squareup.burst.BurstJUnit4;
 import com.squareup.burst.annotation.Burst;
 
@@ -15,7 +16,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(BurstJUnit4.class)
 public class MainActivityTest {
-    @Rule public final TestRule activityRule = new ActivityRule<>(MainActivity.class);
+    @Rule public final TestRule activityRule = new ActivityTestRule<>(MainActivity.class);
 
     @Burst Word word;
 
